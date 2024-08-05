@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset ="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      personal portfolio website
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3b8f51e7ab.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="logo.jpg" class="logo">
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Web Designer</p>
+          <h1>Hi,I'm <span>Harika</span> Konda <br>From Hyderabad.</h1>
+        </div>
+      </div>
+    </div>
+    <!------about------>
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="myimg.jpeg">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Hi, I'm Harika Konda,aspiring Front-End Developer with a strong foundation in HTML, CSS, and JavaScript, and a keen interest in data structures, algorithms, and multiple programming languages including Python, Java, and C. Passionate about creating efficient, user-friendly web interfaces.Currently pursuing Btech at MLRIT</p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <!--<p class="tab-links" onclick="opentab('experience')">Experience</p>-->
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Development</span><br>Designing Wed interfaces</li>
+                <li><span>Programming</span><br>Programming with Python,C,Java</li>
+                <li><span>Problem Solving</span> <br>Problem Solving skills and DSA</li>
+              </ul>
+            </div>
+            <!---<div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Experience</span><br>No Experience still a Student</li>
+              </ul>
+            </div>--->
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2005-2019 Schooling</span><br>from St Joseph's High School,Hyderabad with 9.2 gpa</li>
+                <li><span>2019-2021 Intermediate</span><br>from Sri Gayatri Junior College,Hyderabad with 86.6%</li>
+                <li><span>2021-2025 Graduation</span> <br>from MLR Institution of Technology with 8.6 cgpa</li>
+              </ul>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <!----protfolio-->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="sac.jpeg">
+            <div class="layer">
+              <h3>Scraping a Job Portal</h3>
+              <p>The website scraps the data from other website and gives us the information which we required for a job.</p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="rem.jpeg">
+            <div class="layer">
+              <h3>MediRemind</h3>
+              <p>Developed medication management platform with OCR for extracting medicine names from prescriptions. Features include medication intake alarms and a section for finding online medicine deals.</p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="gsm.jpg">
+            <div class="layer">
+              <h3>GSM based security locker</h3>
+              <p>It is a IOT based locker which gives an alter to the owner by a message whenever unathorized usage/entry is done.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+    <!-----------------contact---------------->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fas fa-paper-plane"></i>harikakonda2003@gmail.com</p>
+            <p><i calss="fas fa-phone-square-alt"></i>8897231558</p>
+            <div class="social-ions">
+              <a href=""><i class="fab fa-twitter-square"></i></a>
+              <a href=""><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="h1.pdf" class="btn btn2">Open Resume</a>
+          </div>
+
+      </div>
+      <div class="copyright">
+        <p>Copyright Harika.Made for assignment</p>
+      </div>
+    </div>
+    <script>
+      var tablinks=document.getElementsByClassName("tab-links");
+      var tabcontents=document.getElementsByClassName("tab-contents");
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
